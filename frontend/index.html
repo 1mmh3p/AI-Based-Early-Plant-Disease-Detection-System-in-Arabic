@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام الذكاء الاصطناعي للكشف المبكر عن الأمراض النباتية</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- الرأس -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>نظام الذكاء الاصطناعي</h1>
+                        <span>للکشف المبکر عن الأمراض النباتية</span>
+                    </div>
+                </a>
+                
+                <nav class="nav">
+                    <a href="#home" class="nav-link active">
+                        <i class="fas fa-home"></i>
+                        الرئيسية
+                    </a>
+                    <a href="#upload" class="nav-link">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        تحليل الصور
+                    </a>
+                    <a href="#diseases" class="nav-link">
+                        <i class="fas fa-bug"></i>
+                        الأمراض
+                    </a>
+                    <a href="#about" class="nav-link">
+                        <i class="fas fa-info-circle"></i>
+                        عن النظام
+                    </a>
+                    <button class="logout-btn" onclick="logout()">
+                        <i class="fas fa-sign-out-alt"></i>
+                        تسجيل الخروج
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="main-content">
+        <!-- قسم الهيرو -->
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <div class="hero-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h2>نظام متقدم للكشف المبكر عن الأمراض النباتية</h2>
+                        <p>استخدم الذكاء الاصطناعي لتشخيص أمراض النباتات بدقة عالية وتوفير حلول علاجية فورية لحماية محاصيلك وزيادة إنتاجيتك</p>
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <span class="stat-number">95%</span>
+                                <span class="stat-label">دقة التشخيص</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">10+</span>
+                                <span class="stat-label">أنواع أمراض</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">ثوانٍ</span>
+                                <span class="stat-label">وقت التحليل</span>
+                            </div>
+                        </div>
+                        <a href="#upload" class="cta-button">
+                            <i class="fas fa-play"></i>
+                            ابدأ التحليل الآن
+                        </a>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="visual-container">
+                            <div class="plant-card healthy">
+                                <div class="plant-image">
+                                    <i class="fas fa-leaf"></i>
+                                </div>
+                                <span>نبات سليم</span>
+                            </div>
+                            <div class="plant-card diseased">
+                                <div class="plant-image">
+                                    <i class="fas fa-leaf"></i>
+                                </div>
+                                <span>نبات مصاب</span>
+                            </div>
+                            <div class="ai-analysis">
+                                <i class="fas fa-brain"></i>
+                                <span>تحليل الذكاء الاصطناعي</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>تحليل فوري</h3>
+                        <p>نتائج دقيقة خلال ثوانٍ باستخدام أحدث تقنيات الذكاء الاصطناعي والتعلم العميق</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>دقة عالية</h3>
+                        <p>نموذج مدرب على آلاف الصور بدقة تصل إلى 95% في تشخيص الأمراض النباتية</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>دعم متعدد</h3>
+                        <p>يدعم تشخيص أمراض الطماطم، البطاطس، والفواكه والخضروات الأخرى</p>
+                    </div>
+
+                  
+                </div>
+            </div>
+        </section>
+
+        <!-- كيفية العمل -->
+        <section class="how-it-works">
+            <div class="container">
+                <div class="section-header">
+                    <h2><i class="fas fa-cogs"></i> كيفية عمل النظام</h2>
+                    <p>تعرف على الخطوات البسيطة لتحليل صورة النبات والحصول على التشخيص</p>
+                </div>
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-icon">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <h3>التقاط الصورة</h3>
+                        <p>قم بالتقاط صورة واضحة لأوراق النبات في إضاءة جيدة</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-icon">
+                            <i class="fas fa-upload"></i>
+                        </div>
+                        <h3>رفع الصورة</h3>
+                        <p>اسحب وأفلت الصورة أو انقر لاختيارها من جهازك</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>التحليل الآلي</h3>
+                        <p>يقوم الذكاء الاصطناعي بتحليل الصورة وتشخيص المرض</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-icon">
+                            <i class="fas fa-file-medical-alt"></i>
+                        </div>
+                        <h3>الحصول على النتائج</h3>
+                        <p>استلم التقرير الكامل عن المرض وطرق العلاج والوقاية</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم تحليل الصور -->
+        <section id="upload" class="upload-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2><i class="fas fa-camera"></i> تحليل صورة النبات</h2>
+                    <p>قم برفع صورة واضحة لأوراق النبات للحصول على تشخيص دقيق للحالة الصحية</p>
+                </div>
+                
+                <div class="upload-container">
+                    <div class="upload-card" id="uploadArea">
+                        <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                        <h3>اسحب وأفلت الصورة هنا</h3>
+                        <p>أو انقر للاختيار من الجهاز</p>
+                        <p class="text-muted">يدعم الصور بصيغ JPG, PNG, JPEG, WEBP - الحجم الأقصى 10MB</p>
+                        
+                        <button class="upload-btn" id="selectImageBtn" type="button">
+                            <i class="fas fa-folder-open"></i>
+                            اختر صورة
+                        </button>
+                        <input type="file" id="imageInput" accept="image/*" hidden>
+                        
+                        <!-- معلومات الملف -->
+                        <div id="fileInfo" class="file-info">
+                            <p class="file-info-header">
+                                <i class="fas fa-info-circle"></i> معلومات الملف:
+                            </p>
+                            <p id="fileName"></p>
+                            <p id="fileSize"></p>
+                            <p id="fileType"></p>
+                        </div>
+                    </div>
+                    
+                    <div class="upload-tips">
+                        <h4><i class="fas fa-lightbulb"></i> نصائح لتحسين النتائج:</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> تأكد من إضاءة جيدة للصورة</li>
+                            <li><i class="fas fa-check"></i> ركز على الأوراق المصابة أو المتغيرة</li>
+                            <li><i class="fas fa-check"></i> تجنب الصور الضبابية أو المظلمة</li>
+                            <li><i class="fas fa-check"></i> اختر صورة عالية الجودة وواضحة</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- معاينة الصورة -->
+                <div class="preview-section" id="previewSection">
+                    <h3>معاينة الصورة المرفوعة</h3>
+                    <div class="preview-container">
+                        <img id="previewImage" src="#" alt="معاينة الصورة" class="preview-image">
+                        <div class="preview-overlay">
+                            <p>الصورة جاهزة للتحليل</p>
+                        </div>
+                    </div>
+                    
+                    <button class="upload-btn analyze-btn" id="analyzeBtn">
+                        <i class="fas fa-search"></i>
+                        بدء تحليل الصورة
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- نتائج التحليل -->
+        <section id="results" class="results-section">
+            <div class="container">
+                <div class="results-header">
+                    <h2><i class="fas fa-chart-bar"></i> نتائج التحليل</h2>
+                    <div class="results-badge">
+                        <i class="fas fa-check-circle"></i>
+                        التحليل مكتمل
+                    </div>
+                </div>
+                
+                <div class="results-grid">
+                    <div class="result-card">
+                        <h3><i class="fas fa-heartbeat"></i> الحالة الصحية</h3>
+                        <div class="disease-status" id="diseaseStatus">
+                            <div class="status-icon healthy">
+                                <i class="fas fa-spinner fa-spin"></i>
+                            </div>
+                            <span>جاري التحليل...</span>
+                        </div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <h3><i class="fas fa-chart-pie"></i> مستوى الثقة</h3>
+                        <div class="confidence-meter">
+                            <div class="confidence-track">
+                                <div class="confidence-fill" id="confidenceFill"></div>
+                            </div>
+                            <span class="confidence-text" id="confidenceText">0%</span>
+                        </div>
+                        <p class="confidence-desc">دقة نموذج الذكاء الاصطناعي في التشخيص</p>
+                    </div>
+                    
+                    <div class="result-card">
+                        <h3><i class="fas fa-clock"></i> وقت التحليل</h3>
+                        <div class="analysis-time">
+                            <div class="time-icon">
+                                <i class="fas fa-stopwatch"></i>
+                            </div>
+                            <span id="analysisTime">-- ثانية</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- معلومات المرض -->
+                <div class="disease-info">
+                    <h3><i class="fas fa-info-circle"></i> معلومات مفصلة عن الحالة</h3>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <div class="info-header">
+                                <i class="fas fa-eye"></i>
+                                <h4>الأعراض الظاهرة</h4>
+                            </div>
+                            <p id="symptomsText">-</p>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-header">
+                                <i class="fas fa-search"></i>
+                                <h4>الأسباب المحتملة</h4>
+                            </div>
+                            <p id="causesText">-</p>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-header">
+                                <i class="fas fa-shield-alt"></i>
+                                <h4>إجراءات الوقاية</h4>
+                            </div>
+                            <p id="preventionText">-</p>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-header">
+                                <i class="fas fa-stethoscope"></i>
+                                <h4>خطة العلاج</h4>
+                            </div>
+                            <p id="treatmentText">-</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button class="upload-btn" onclick="analyzeNewImage()">
+                        <i class="fas fa-redo"></i>
+                        تحليل صورة جديدة
+                    </button>
+                    <button class="upload-btn secondary" onclick="downloadReport()">
+                        <i class="fas fa-download"></i>
+                        تحميل التقرير
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم الأمراض الشائعة -->
+        <section id="diseases" class="diseases-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2><i class="fas fa-bug"></i> الأمراض النباتية الشائعة</h2>
+                    <p>تعرف على أكثر الأمراض النباتية انتشاراً وطرق التعامل معها</p>
+                </div>
+                
+                <div class="diseases-grid">
+                    <div class="disease-card">
+                        <div class="disease-icon early-blight">
+                            <i class="fas fa-circle"></i>
+                        </div>
+                        <h3>اللفحة المبكرة</h3>
+                        <p>بقع بنية داكنة على الأوراق بحلقات متحدة المركز</p>
+                        <div class="disease-tags">
+                            <span class="disease-tag fungal">فطري</span>
+                            <span class="disease-tag severity-medium">متوسط</span>
+                        </div>
+                    </div>
+                    
+                    <div class="disease-card">
+                        <div class="disease-icon late-blight">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <h3>اللفحة المتأخرة</h3>
+                        <p>بقع مائية على الأوراق، عفن أبيض، ذبول سريع</p>
+                        <div class="disease-tags">
+                            <span class="disease-tag fungal">فطري</span>
+                            <span class="disease-tag severity-high">عالٍ</span>
+                        </div>
+                    </div>
+                    
+                    <div class="disease-card">
+                        <div class="disease-icon bacterial-spot">
+                            <i class="fas fa-bacteria"></i>
+                        </div>
+                        <h3>البقعة البكتيرية</h3>
+                        <p>بقع صغيرة مائية تتحول إلى بني مع هالة صفراء</p>
+                        <div class="disease-tags">
+                            <span class="disease-tag bacterial">بكتيري</span>
+                            <span class="disease-tag severity-medium">متوسط</span>
+                        </div>
+                    </div>
+                    
+                    <div class="disease-card">
+                        <div class="disease-icon mosaic-virus">
+                            <i class="fas fa-virus"></i>
+                        </div>
+                        <h3>الفيروس الفسيفسائي</h3>
+                        <p>تغير لون الأوراق بشكل فسيفسائي، تشوه الأوراق</p>
+                        <div class="disease-tags">
+                            <span class="disease-tag viral">فيروسي</span>
+                            <span class="disease-tag severity-high">عالٍ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم عن النظام والطلاب -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2><i class="fas fa-info-circle"></i> عن النظام والطلاب</h2>
+                    <p>تعرف على فريق التطوير وأهداف المشروع وتفاصيل النظام</p>
+                </div>
+
+                <div class="about-content">
+                    <!-- معلومات الطلاب -->
+                    <div class="students-section">
+                        <h3><i class="fas fa-users"></i> الفريق </h3>
+                        <div class="students-grid">
+                            <div class="student-card">
+                                <div class="student-avatar">
+                                    <i class="fas fa-user-graduate"></i>
+                                </div>
+                                <div class="student-info">
+                                    <h4>براء عوض النعيمي</h4>
+                                    <p class="student-desc">مسؤول عن تطوير واجهة المستخدم ونظام الذكاء الاصطناعي وتحليل البيانات</p>
+                                </div>
+                               
+                            </div>
+
+                            <div class="student-card">
+                                <div class="student-avatar">
+                                    <i class="fas fa-user-graduate"></i>
+                                </div>
+                                <div class="student-info">
+                                    <h4>مرح محمد الفلاح</h4>
+                                    <p class="student-desc">مسؤولة عن جمع البيانات وتحليل النتائج واختبار النظام وجودة البيانات</p>
+                                </div>
+                            
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- معلومات المشروع -->
+                    <div class="project-info">
+                        <div class="project-details">
+                            <h3><i class="fas fa-project-diagram"></i> معلومات المشروع</h3>
+                            <div class="detail-grid">
+                                <div class="detail-item">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-tag"></i>
+                                    </div>
+                                    <div class="detail-content">
+                                        <h4>اسم المشروع</h4>
+                                        <p>نظام للكشف المبكر عن الأمراض النباتية باستخدام معالجة الصور والذكاء الاصطناعي</p>
+                                    </div>
+                                </div>
+
+                                <div class="detail-item">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-bullseye"></i>
+                                    </div>
+                                    <div class="detail-content">
+                                        <h4>الهدف الرئيسي</h4>
+                                        <p>تطوير نظام ذكي قادر على التعرف على الأمراض النباتية في مراحلها المبكرة من خلال تحليل صور أوراق النباتات باستخدام تقنيات الذكاء الاصطناعي</p>
+                                    </div>
+                                </div>
+
+                                <div class="detail-item">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-cogs"></i>
+                                    </div>
+                                    <div class="detail-content">
+                                        <h4>التقنيات المستخدمة</h4>
+                                        <div class="tech-tags">
+                                            <span class="tech-tag">Python</span>
+                                            <span class="tech-tag">TensorFlow</span>
+                                            <span class="tech-tag">Keras</span>
+                                            <span class="tech-tag">OpenCV</span>
+                                            <span class="tech-tag">Flask</span>
+                                            <span class="tech-tag">HTML/CSS/JS</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- أهداف المشروع -->
+                        <div class="goals-section">
+                            <h3><i class="fas fa-flag"></i> أهداف المشروع</h3>
+                            <div class="goals-list">
+                                <div class="goal-item">
+                                    <div class="goal-number">1</div>
+                                    <div class="goal-content">
+                                        <h4>بناء نموذج ذكاء اصطناعي</h4>
+                                        <p>تصنيف الأمراض النباتية بدقة عالية باستخدام التعلم العميق والشبكات العصبية التلافيفية (CNN)</p>
+                                    </div>
+                                </div>
+
+                                <div class="goal-item">
+                                    <div class="goal-number">2</div>
+                                    <div class="goal-content">
+                                        <h4>واجهة مستخدم سهلة</h4>
+                                        <p>توفير واجهة بسيطة ومبتكرة لرفع الصور والحصول على التشخيص مباشرة مع شرح النتائج</p>
+                                    </div>
+                                </div>
+
+                                <div class="goal-item">
+                                    <div class="goal-number">3</div>
+                                    <div class="goal-content">
+                                        <h4>قاعدة بيانات شاملة</h4>
+                                        <p>إنشاء قاعدة بيانات تحتوي على معلومات الأمراض وطرق العلاج والوقاية بشكل مفصل</p>
+                                    </div>
+                                </div>
+
+                                <div class="goal-item">
+                                    <div class="goal-number">4</div>
+                                    <div class="goal-content">
+                                        <h4>تطوير الزراعة الذكية</h4>
+                                        <p>المساهمة في تحسين الإنتاج المستدام وتقليل الخسائر الزراعية باستخدام التكنولوجيا الحديثة</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- مكونات النظام -->
+                        <div class="components-section">
+                            <h3><i class="fas fa-layer-group"></i> مكونات النظام</h3>
+                            <div class="components-grid">
+                                <div class="component-card">
+                                    <div class="component-icon">
+                                        <i class="fas fa-image"></i>
+                                    </div>
+                                    <h4>معالجة الصور</h4>
+                                    <p>تحسين جودة الصور، إزالة الضوضاء، وضبط الإضاءة باستخدام مكتبة OpenCV</p>
+                                </div>
+
+                                <div class="component-card">
+                                    <div class="component-icon">
+                                        <i class="fas fa-brain"></i>
+                                    </div>
+                                    <h4>التعلم العميق</h4>
+                                    <p>تدريب نموذج CNN على آلاف الصور للنباتات المصابة والسليمة باستخدام TensorFlow وKeras</p>
+                                </div>
+
+                                <div class="component-card">
+                                    <div class="component-icon">
+                                        <i class="fas fa-desktop"></i>
+                                    </div>
+                                    <h4>واجهة المستخدم</h4>
+                                    <p>واجهة ويب تفاعلية تتيح رفع الصور واستعراض النتائج بتصميم عصري ومتجاوب</p>
+                                </div>
+
+                                <div class="component-card">
+                                    <div class="component-icon">
+                                        <i class="fas fa-database"></i>
+                                    </div>
+                                    <h4>قاعدة البيانات</h4>
+                                    <p>تخزين معلومات الأمراض والتحليلات السابقة وتقارير التشخيص للمستخدمين</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- التطوير المستقبلي -->
+                        <div class="future-section">
+                            <h3><i class="fas fa-rocket"></i> التطوير المستقبلي</h3>
+                            <div class="future-features">
+                                <div class="future-item">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>تطبيق موبايل بالكاميرا المباشرة</span>
+                                </div>
+                                <div class="future-item">
+                                    <i class="fas fa-cloud"></i>
+                                    <span>خدمات سحابية لتخزين البيانات</span>
+                                </div>
+                                <div class="future-item">
+                                    <i class="fas fa-leaf"></i>
+                                    <span>دعم أنواع نباتات إضافية</span>
+                                </div>
+                                <div class="future-item">
+                                    <i class="fas fa-chart-bar"></i>
+                                    <span>لوحة تحكم للإحصائيات</span>
+                                </div>
+                                <div class="future-item">
+                                    <i class="fas fa-language"></i>
+                                    <span>دعم لغات متعددة</span>
+                                </div>
+                                <div class="future-item">
+                                    <i class="fas fa-robot"></i>
+                                    <span>دمج مع أنظمة الري الذكية</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- التذييل -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>عن النظام</h3>
+                    <p>نظام متقدم يستخدم الذكاء الاصطناعي للكشف المبكر عن الأمراض النباتية، مما يساعد المزارعين على حماية محاصيلهم وزيادة الإنتاجية باستخدام أحدث تقنيات التعلم العميق.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#upload">تحليل الصور</a></li>
+                        <li><a href="#diseases">الأمراض الشائعة</a></li>
+                        <li><a href="#about">عن النظام</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>الـفريق </h3>
+                    <p>براء عوض النعيمي</p>
+                    <p>مرح محمد الفلاح</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>التقنيات المستخدمة</h3>
+                    <div class="tech-stack">
+                        <span>TensorFlow</span>
+                        <span>Keras</span>
+                        <span>OpenCV</span>
+                        <span>Flask</span>
+                        <span>Python</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 نظام الذكاء الاصطناعي للكشف المبكر عن الأمراض النباتية. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
